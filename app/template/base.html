@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+{% block head %}
+    {{super()}}
+{% endblock %}
+{% block title %}CDAMA - Data Sharing App {% endblock %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon" />
+<link rel="icon" href="{{url_for('static', filename='favicon.ico')}}" type="image/x-icon">
+{% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation" style="margin: 0 ;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle-Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">CDAMA</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li> 
+                    <li><a href="/">About</a></li> 
+                    <li><a href="/">Data</a></li> 
+                    <li><a href="/">Research</a></li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    {% block page_content %}{% endblock %}
+{% endblock %}

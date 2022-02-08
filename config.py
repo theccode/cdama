@@ -11,7 +11,11 @@ class Config:
     CDAMA_MAIL_SUBJECT_PREFIX = 'CDAMA'
     CDAMA_MAIL_SENDER = 'CDAMA Admin <cdamaadmin@gmail.com'
     CDAMA_ADMIN = os.environ.get('CDAMA_ADMIN')
-    SQL_ALCHEMY_TRACK_MODIFICATIONS = False
+    SQL_ALCHEMY_TRACK_MODIFICATIONS = False  
+
+    @staticmethod
+    def init_app(app):
+        pass
 
 class DevelopmentConfig(Config):
     DEBUG = True
@@ -33,5 +37,5 @@ config = {
     'development': DevelopmentConfig,
     'testing': TestingConfig,
     'production': ProductionConfig,
-    'default': DevelopmentConfig
+    'default': DevelopmentConfig 
 }
