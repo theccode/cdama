@@ -5,7 +5,7 @@ from config import config
 
 bootstrap = Bootstrap()
 def create_app(config_name): 
-    app = Flask(__name__, template_folder='template')
+    app = Flask(__name__, template_folder='template', static_folder='static')
     # app.config.from_object(config[config_name])
     # config[config_name].init_app(app)
 
