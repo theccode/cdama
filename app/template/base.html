@@ -5,8 +5,9 @@
 {% block title %}CDAMA - Data Sharing App {% endblock %}
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon" />
 <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/app.css')}}">
 {% block navbar %}
-    <div class="navbar navbar-inverse" role="navigation" style="margin: 0 ;">
+    <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -20,13 +21,14 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li> 
-                    <li><a href="/">About</a></li> 
-                    <li><a href="/">Data</a></li> 
-                    <li><a href="/">Research</a></li> 
+                    <li><a href="/about">About</a></li> 
+                    <li><a href="/upload">Data</a></li> 
+                    <li><a href="/research">Research</a></li> 
+                    <li><a href="/learn">Learning</a></li> 
                 </ul>
             </div>
         </div>
-    </div>
+  </div>
 {% endblock %}
 {% block content %}
     {% block page_content %}{% endblock %}
