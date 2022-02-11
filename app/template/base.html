@@ -1,5 +1,5 @@
 {% block head %}
-{% block title %}CDAMA - Data Sharing App {% endblock %}
+<title>Welcome to C-DAMAA</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon" />
 <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}" type="image/x-icon">
@@ -18,16 +18,24 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/upload" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/overview">Overview and Mission Statement</a></li>
+              <li><a class="dropdown-item" href="/people">People</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/careers">Careers</a></li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/upload" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Data
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/upload">Upload Data</a></li>
-              <li><a class="dropdown-item" href="/share">Download Data</a></li>
+              <li><a class="dropdown-item" href="/upload">Share Data</a></li>
+              <li><a class="dropdown-item" href="/share">Find Data</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/compare">Compare Data</a></li>
             </ul>
@@ -41,9 +49,14 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          
         </form>
+
       </div>
+       <div class="text-end">
+          <button type="button" class="btn btn-light text-dark me-2">Login</button>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
     </div>
   </nav>
 {% endblock %}
