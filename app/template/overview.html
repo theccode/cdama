@@ -1,7 +1,22 @@
 {% extends "base.html" %}
-{% block title %} Overview {% endblock %}
+{% block head %}
+    {{super()}}
+    {% block title %}
+        <title>Overview</title> 
+    {% endblock %}
+{% endblock %}
 {% block page_content %}
     <div class="page-header">
         <h1>Page is currently under construction.</h1>
     </div>
+    <p class="leading">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa enim aliquam alias eius excepturi corrupti neque temporibus tempora! Tempora, voluptates obcaecati suscipit laudantium quas consectetur earum illum amet tenetur harum.
+        Vero rem laborum, quia numquam nulla dolorem consequuntur et, eos quam inventore ab consequatur labore illum blanditiis nobis? Eligendi nesciunt exercitationem facilis doloribus consequuntur nulla non ipsum ut repellendus voluptate.
+        Nihil nam aut, ipsum nisi ullam esse voluptatibus! Enim aliquid natus exercitationem omnis molestiae reiciendis facilis earum, unde mollitia sunt odit placeat beatae asperiores corporis fugiat neque, tempore soluta minima?
+        Dolor blanditiis nisi, sapiente amet, nihil error dolore fugiat sint praesentium repellat iste aperiam nam modi velit voluptates possimus ipsam natus, officiis sequi odit suscipit maiores fuga repellendus! Omnis, voluptate.
+        Veniam voluptate consequuntur deleniti debitis eius vitae inventore perferendis, maiores voluptates ad adipisci nam aperiam. Aperiam saepe dolores temporibus eveniet voluptatem odio ullam explicabo quibusdam. Dolorum aut fugit unde eius!
+    </p>
+    {% block footer %}
+        {{super()}}
+    {% endblock %}
 {% endblock %}
