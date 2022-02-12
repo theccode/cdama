@@ -1,12 +1,16 @@
 {% extends "base.html"%}
-{% block title %} CDAMA-Data Sharing App. {% endblock %}
+{% block head %}
+    {{super()}}
+    {% block title %}
+        <title>Welcome to CDAMAA</title> 
+    {% endblock %}
+{% endblock %}
 {% block page_content %}
     {% block jumbotron%}
         {% import "jumbo.html" as jumbo %}
         {{ jumbo }}
     {% endblock %}
-{% endblock %}
-{% block footer %}
-    {% import "footer.html" as footer %}
-    {{ footer }}
+    {% block footer %}
+        {{super()}}
+    {% endblock %}
 {% endblock %}

@@ -1,7 +1,22 @@
 {% extends "base.html" %}
-{% block title %} Research {% endblock %}
+{% block head %}
+    {{super()}}
+    {% block title %}
+        <title>Join our research team.</title> 
+    {% endblock %}
+{% endblock %}
 {% block page_content %}
     <div class="page-header">
         <h1>Page is currently under construction.</h1>
     </div>
+    <p class="leading">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga excepturi doloribus amet, non autem magnam ea eos consectetur, laborum culpa vel rerum at tempore nemo, vero maiores sit laboriosam hic.
+        Iure nulla itaque possimus. Id a, in sint quos dicta totam aliquam ex autem aut voluptas quisquam, iusto quam placeat minus maiores error! Ea tenetur iusto sint iste perspiciatis exercitationem?
+        Repellendus dignissimos quidem harum velit error animi eveniet atque nulla aspernatur, alias tempore, vitae magni sint quae voluptatum quos itaque consequuntur quasi veniam vel. Magnam, libero voluptas. Quo, asperiores corrupti?
+        Odio officia inventore facere ullam corporis? Sequi perspiciatis maiores dolores eveniet velit sit, sint harum delectus quidem veritatis libero! Impedit hic ut officia, tempora ipsum corrupti. Voluptate ad iure facere.
+        Consequatur officia dolore mollitia fugit ducimus temporibus obcaecati. Temporibus animi, iure sapiente eveniet quaerat, adipisci repellendus voluptate repudiandae nisi perspiciatis deleniti eaque iusto ab doloremque laudantium asperiores mollitia neque provident?
+    </p>
+    {% block footer %}
+    {{super()}}
+    {% endblock %}
 {% endblock %}
