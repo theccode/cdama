@@ -12,7 +12,9 @@
     border-radius: .3rem;
   }
 footer {
-    margin-bottom: 0;
+    position: absolute;
+    bottom: -30;
+    width: 100%;
     color: red !important;
 }
  
