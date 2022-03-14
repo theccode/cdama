@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- <link rel="stylesheet" href="deposit.css"> -->
+   {{super()}}
+    {% block title %}
+        <title>Data Deposit</title>
+    {%endblock%}
+{%endblock%}
+{% block page_content %} 
+    <h3 style="align-content: center;margin-left: 350px;">Project Name</h3>
+    <div class="input-group mb-3 center">
+        <input type="search" class="form-control" placeholder="Search within this workspace,enter 3 or more characters" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">search</button>
+      </div>
+    <div class="div-square">
+        <button style="margin-left: 40px;margin-top: 10px;border-color: white;">Create Folder</button>
+        <button style="margin-left: 10px;background-color: rgb(57, 125, 202);color: white;border-color:rgb(57, 125, 202); ;">Upload Files</button>
+        <button style="margin-left: 15px;border-color: white;">import from zip</button>
+        <button style="margin-left: 180px;font-size:10px;border-color: white;">more</button>
+    </div>
+    
+    <div class="second-div"><button style="margin-left: 20px;background-color:rgb(57, 125, 202);color: white;">Project</button>
+        <hr>
+    </div>
+    <div class="third-div">
+        <input type="checkbox" id="description-1" />
+        <label for="description-1">Project Description</label>
+         <div class="project-content">
+            <div class="parent">
+                <span class="desc">Principal Investigator</span><span class="required"> (Required) </span><input type="button" value="?"> <button class="btn-add-value">+ add value</button>
+            </div>
+            <div class="content">
+                <span class="desc">Summary</span><span class="required"> (Required) </span>
+                <span class="edit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg></span><button class="edit-button">edit</button>
+            </div>
+            <div class="parent">
+                    <span class="desc">Funding Sources</span><span class="required"> (Required) </span><input type="button" value="?"> <button class="btn-add-value">+ add value</button>  
+            </div>
+            <div class="content">
+                <span class="desc">Grant Managers</span><span class="required"> (Required) </span><input type="button" value="?"> <button class="btn-add-value">+ add value</button>
+            </div>
+         </div>
+     </div>
+     <div class="fourth-div">    
+         <input type="checkbox" id="description-2" />
+          <label for="description-2">Scope of Project</label>
+          <div class="project-content">
+            <div class="parent">
+                <span class="desc">Subject terms</span>
+                <p>Do not copy/paste multiple terms into this field. Terms must be entered individually.</p>
+            </div>
+          </div>
+        </div> 
+        <div class="fifth-div">   
+          <input type="checkbox" id="description-3" />
+          <label for="description-3">Methodology</label>
+          <div class="project-content">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum reprehenderit ipsum quibusdam tenetur corporis similique deleniti nesciunt facere corrupti, l
+                 abore magnam, iusto, delectus officiis totam voluptatem quam inventore numquam.</p>
+          </div>
+        </div> 
+        <div class="sixth-div">
+          <input type="checkbox" id="description-3" />
+          <label for="description-3">Related Publications</label>
+          <div class="project-content">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum reprehenderit ipsum quibusdam tenetur corporis similique deleniti nesciunt facere corrupti, l
+                 abore magnam, iusto, delectus officiis totam voluptatem quam inventore numquam.</p>
+          </div>
+        </div> 
+    </div>         
+{{super()}}
+{% endblock %}

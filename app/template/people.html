@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% block head %}
+   {{super()}}
+    {% block title %}
+        <title>People</title>
+      {%endblock%}
+{%endblock%}
+{%block page_content%}   
+       <section id="research" class="research">
+           <div class="container">
+               <div class="page-header">
+                   <br>
+                  
+                   <h3>Meet the Team</h3> 
+                   <br>
+                   <p>The mission of C-DAMAA is to increase access to individual, household and firm level data as well as macroeconomic data to promote a culture of interrogating complex relationships among issues using acquired analytical skills.
+                        Further to this, C-DAMAA engages industry, government and development partners on research outcomes through the active and regular release of policy briefs and dialogues with all stakeholders.
+                    </p>  
+                    <br>
+                    <div class ="row" style="display: flex">
+                        <div class="column">
+                          <div class='card'>
+                            <img src="../static/images/cantah.jpg" alt="William" style="width:200px; height:200px;">
+                            <div class="container">
+                            <h5>Dr.William Godfred Cantah</h5>
+                                <p><button type="button" class="btn btn-primary">Contact</button></p>
+                            </div>
+                        </div>
+                    </div> 
+                    </div> 
+                <div class="column">
+                    <div class="card">
+                        <img src="../static/images/sebu.jpg"  alt="Joshua" style="width:200px;height:200px;">
+                          <div class="container">
+                            <h5>Dr.Joshua Sebu</h5>
+                            <p class="title">Applied Econometrics/Data Curator.</p>
+                            <p><button type="button" class="btn btn-primary">Contact</button></p>
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="column">
+                        <div class="card">
+                            <img src="../static/images/ewura.jpg"  alt="Ewura" style="width:200px;height:200px;">
+                              <div class="container">
+                                <h5>Dr. Ewura-Adwoa E.</h5>
+                                <p class="title">Applied Microeconometrics.</p>
+                                <p><button type="button" class="btn btn-primary">Contact</button></p>
+                              </div>
+                            </div>
+                          </div>             
+                        </section>
+{{super()}}
+{% endblock %}

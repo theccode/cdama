@@ -1,0 +1,29 @@
+
+{%extends "base.html" %}
+{% block head %}
+   {{super()}}
+    {% block title %}
+        <title>Resources for Students</title>
+      {%endblock%}
+{%endblock%}
+{%block page_content%} 
+       <section id="resource" class="resource">
+           <div class="container">
+               <div class="page-header">
+                   <br>
+                   <h2>Resources for Students</h2> 
+                   <br>
+                   <h4>Learning Support</h4>  
+                   <br>   
+                   <h5>Webinars and Tutorials</h5>
+                   <br>
+                   <h5>Using Resources for Instructors</h5>   
+                   <br>
+                   <p>Students wishing to sharpen their research skills or explore a variety of research topics are welcome to make use of these Teaching & Learning resources.
+                        Data-Driven Learning Guides demonstrate questions of interest to social scientists using real data and predefined analyses.
+                        Exercise Sets are sequenced activities that build toward a stated learning goal.</p> 
+                </div>
+            </div>
+         </section>        
+        {{super()}}   
+{%endblock%}

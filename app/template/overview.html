@@ -7,9 +7,11 @@
 {% endblock %}
 {% block page_content %}
     <section id="overview" class="overview">
+    <body style= "background-color:white" >
      <div class="container">
         <div class="page-header">
-            <h3 style='font-family: Verdana, Geneva, Tahoma, sans-serif'>Overview</h3>
+            <br>
+            <h3 style='font-family: Verdana, Geneva, Tahoma, sans-serif'>About Us</h3>
         <p style='color:rgb(3, 8, 10)'>
             The Centre for Data Archiving, Analysis and Advocacy (C-DAMAA) is a research centre in the School of Economics, University of Cape Coast.
         <br>
@@ -24,10 +26,9 @@
          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Mission Statement</h3>
         <p>The mission of C-DAMAA is to increase access to individual, household and firm level data as well as macroeconomic data to promote a culture of interrogating complex relationships among issues using acquired analytical skills. 
             Further to this, C-DAMAA engages industry, government and development partners on research outcomes through the active and regular release of policy briefs and dialogues with all stakeholders.</p>
+        </body>       
     </div>
         </div>
     </section>
-    {% block footer %}
         {{super()}}
-    {% endblock %}
 {% endblock %}

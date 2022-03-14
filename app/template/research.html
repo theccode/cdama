@@ -1,22 +1,34 @@
+
 {% extends "base.html" %}
 {% block head %}
-    {{super()}}
+   {{super()}}
     {% block title %}
-        <title>Join our research team.</title> 
-    {% endblock %}
-{% endblock %}
-{% block page_content %}
-    <div class="page-header">
-        <h1>Page is currently under construction.</h1>
-    </div>
-    <p class="leading">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga excepturi doloribus amet, non autem magnam ea eos consectetur, laborum culpa vel rerum at tempore nemo, vero maiores sit laboriosam hic.
-        Iure nulla itaque possimus. Id a, in sint quos dicta totam aliquam ex autem aut voluptas quisquam, iusto quam placeat minus maiores error! Ea tenetur iusto sint iste perspiciatis exercitationem?
-        Repellendus dignissimos quidem harum velit error animi eveniet atque nulla aspernatur, alias tempore, vitae magni sint quae voluptatum quos itaque consequuntur quasi veniam vel. Magnam, libero voluptas. Quo, asperiores corrupti?
-        Odio officia inventore facere ullam corporis? Sequi perspiciatis maiores dolores eveniet velit sit, sint harum delectus quidem veritatis libero! Impedit hic ut officia, tempora ipsum corrupti. Voluptate ad iure facere.
-        Consequatur officia dolore mollitia fugit ducimus temporibus obcaecati. Temporibus animi, iure sapiente eveniet quaerat, adipisci repellendus voluptate repudiandae nisi perspiciatis deleniti eaque iusto ab doloremque laudantium asperiores mollitia neque provident?
-    </p>
-    {% block footer %}
-    {{super()}}
-    {% endblock %}
+        <title>Research</title>
+      {%endblock%}
+{%endblock%}
+{%block page_content%}    
+       <section id="research" class="research">
+           <div class="container">
+               <div class="page-header">
+        <body style="background-color:white">
+                   <br>
+                   <h3>How to cite datasets used in your research publications</h3>
+                   <br>
+                   <p >It is good research practice to cite primary data sources in your published papers, just as you would cite research publications</p>
+                   <p>Here are some tips on citing data you use in your research:.</p>
+                   <ul>
+                       <li>Identify the data early in on your paper, preferably in the abstract.</li>
+                    <li>Include a dedicated "data" section so that readers can immediately identify the data that underlies your work.</li>
+                    <li>Refer to your data sources in your data tables.</li>
+                    <li>Cite data in your references. References are more frequently indexed than full papers, so the citation will be made more visible by its inclusion here.</li>
+                    <li>Cite the exact version of the data used in your research, to support data discovery. That is, the version in the citation must be the version you used in your research.</li>
+                    <li>Include the unique identifier of the dataset in your citation, such as Direct Object Identifiers (DOIs).These will enable the data to be accessed even if URLs change and thus provide a permanent link to the data.</li>
+                    <li>Include a unique identifier for the dataset when you cite data, such as a Direct Object Identifier (DOI).</li>
+                </ul>
+        </body>
+               </div>
+           </div>
+
+       </section>
+{{super()}}
 {% endblock %}

@@ -20,7 +20,35 @@ def learn():
 @main.route('/research', methods=['GET'])
 def research():
     return render_template('research.html')
+
 @main.route('/overview',methods=['GET'])
 def overview():
     return render_template('overview.html')
 
+@main.route('/people',methods=['GET'])
+def people():
+    return render_template('people.html') 
+
+@main.route('/resource',methods=['GET'])
+def resource():
+    return render_template('resource.html') 
+
+@main.route('/workshops',methods=['GET'])
+def workshops():
+    return render_template('workshops.html')
+
+@main.route('/program',methods=['GET'])
+def program():
+    return render_template('programs.html')
+
+@main.route('/signup',methods=['GET']) 
+def signup():
+    return render_template('signup.html')
+    
+@main.route('/login',methods=['GET']) 
+def login():
+    return render_template('login.html')
+
+@main.route('/deposit',methods=['GET','POST']) 
+def deposit():
+    return render_template('deposit.html')

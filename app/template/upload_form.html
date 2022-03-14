@@ -7,18 +7,48 @@
 {% endblock %}
 {% block page_content %}
     <div class="page-header">
-        <h1>Page is currently under construction.</h1>
+        <h1>Start Uploading Data</h1>
     </div>
     <!-- <h1>Page is currently under construction.</h1> -->
 
     <p class="leading">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illo deserunt est corrupti, harum sunt officiis voluptatum, voluptate sint molestiae temporibus non enim, vitae provident corporis nulla? Illo, ab voluptate?
-        Eius adipisci veritatis nesciunt! Repudiandae pariatur adipisci quod doloremque, perspiciatis fugiat eum cum dolorem blanditiis natus illo nihil accusantium perferendis ipsum quo voluptates corporis cumque debitis ut qui facere deserunt.
-        Labore odit quos quia aspernatur ipsa cum in omnis eius quam doloribus quasi necessitatibus animi modi qui, velit rem minus exercitationem eaque iusto perspiciatis aut illum! Suscipit accusamus error eius!
-        Quidem, sint nam, ad recusandae fuga ipsam cupiditate voluptatibus aut libero corrupti possimus illum, maxime necessitatibus debitis? Labore a, quos repellat atque vero nobis doloremque non minima veniam quasi officiis.
-        Unde reprehenderit cupiditate nisi accusantium temporibus! Ad iusto in ea vitae deserunt repellendus ex quam facilis facere laboriosam blanditiis iure veniam, architecto nemo quis, libero possimus debitis quibusdam. Maxime, repellat.
+        CDAMAA welcomes and encourages deposits of digital data. Depositing data into ICPSR is free.
+         Deposits are made using a secure data deposit form to describe the data collection and upload content
     </p>
-    {% block footer %}
+    <br>
+    <div class="text-center m-3">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+       Start Data Deposit
+      </button>
+    </div>
+    
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-center">Create a Project</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <label for="title" style="margin-bottom: 2rem;">Project Title</label> 
+              <input  type="text" placeholder="Enter Project Title" class="form-control">
+              <br>
+              <br>
+              <label for="instruction" class="form-check-label" >Is this deposit related to an existing CDAMAA collection or data series?</label>
+              <label class="form-check-label">
+                <input type="radio" name="choice" value="Yes"  class="form-check-input" > Yes
+              </label>
+              <label class="form-check-label" >
+                <input type="radio" name="choice" value="No" class="form-check-input" > No
+              </label>
+              </div>
+              <div class="modal-footer">
+                <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color: blue;">Save and Apply</button></a>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
         {{super()}}
-    {% endblock %}
 {% endblock %}
