@@ -13,55 +13,351 @@
         <button type="button" class="btn btn-outline-primary">search</button>
       </div>
     <div class="div-square">
-        <button style="margin-left: 40px;margin-top: 10px;border-color: white;">Create Folder</button>
-        <button style="margin-left: 10px;background-color: rgb(57, 125, 202);color: white;border-color:rgb(57, 125, 202); ;">Upload Files</button>
-        <button style="margin-left: 15px;border-color: white;">import from zip</button>
-        <button style="margin-left: 180px;font-size:10px;border-color: white;">more</button>
+        <button type ="button"class="btn btn-light text-dark me-2">Create Folder</button>
+        <button type="button" class="btn btn-primary">Upload Files</button> </a>
+        <button type="button"class="btn btn-light text-dark me-2">import from zip</button>
+        <button type="button"class="btn btn-light text-dark me-2">more</button>
     </div>
     
-    <div class="second-div"><button style="margin-left: 20px;background-color:rgb(57, 125, 202);color: white;">Project</button>
+    <div class="second-div"><button type="button" class="btn btn-primary">Project</button> </a>
         <hr>
     </div>
     <div class="third-div">
-        <input type="checkbox" id="description-1" />
-        <label for="description-1">Project Description</label>
+        <input class="accordion-input" type="checkbox" id="description-1" />
+        <label class="accordion-label" for="description-1">Project Description</label>
          <div class="project-content">
-            <div class="parent">
-                <span class="desc">Principal Investigator</span><span class="required"> (Required) </span><input type="button" value="?"> <button class="btn-add-value">+ add value</button>
+          <div class="project-text">
+            <h6>Principal Investigator(s)</h6>
+            <button type="button" class="btn btn-primary add-value" data-bs-toggle="modal" data-bs-target="#myModal-principal">
+             + add value
+            </button>
+          </div>
+          <div class="modal" id="myModal-principal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title text-center">Add Person|Organisation</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form method="get">
+                <div class="modal-body">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Person</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Organisation/Agency</a>
+                    </li>
+                  </ul> 
+                  <form>
+                    
+                    <label for="first-name" style="margin-bottom: 0.5rem;margin-top: 1rem;">First Name(required)</label> 
+                      <input  type="text" placeholder="Ama K" class="form-control">
+                      <br>
+                      <label for="last-name" style="margin-bottom: 0.5rem">Last Name(required)</label> 
+                      <input  type="text" placeholder="Doe" class="form-control">
+                        <br>
+                    <input class="form-input-text"type="submit">
+                  </form>
+                  </div>
+                    <div class="modal-footer">
+                      <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color: blue;">Save and Apply</button></a>
+                    </div>
+                  </form>
+              </div>
+            </div>
+           </div>
+            <div class="content">
+                <span class="desc">Summary</span><span class="required"> (Required) </span><br>
+                <span class="edit-icon"><button class="edit-button" id="summary-edit-button" style="margin-left:0.3rem"><img src="../static/images/pencil.svg"></span > edit</button>
+                    <br>
+                    <textarea class="text-box" name="subject terms" id="subject terms"></textarea>
+             </div>
+             <div class="project-text">
+              <span class="desc">Funding Sources</span><span class="required">(required)</span>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-funding">
+               + add value
+              </button>
+            </div>
+            <div class="modal" id="myModal-funding">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title text-center">Funding</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <form method="post">
+                    <div class="modal-body">
+                      <label for="title" style="margin-bottom: 1rem;">Organization Name</label> 
+                      <input  type="text" placeholder="Enter organization name" class="form-control">
+                      <br>
+                      <label for="title" style="margin-bottom: 1rem;">Grant Number</label> 
+                      <input  type="text" placeholder="Enter your grant Number" class="form-control">
+                      <a href="/deposit"><button type="button" class="btn btn -secondary" style="background-color:darkblue;color: white;">Save and Apply</button></a>
+                    </div>
+                      <div class="modal-footer">
+                        <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color:white;color: black;">close</button></a>
+                      </div>
+                  </form>
+                </div>
+              </div>
             </div>
             <div class="content">
-                <span class="desc">Summary</span><span class="required"> (Required) </span>
-                <span class="edit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg></span><button class="edit-button">edit</button>
+              <span class="desc">Grant Manager(s)</span><span class="required">(required)</span>
+              <button type="button" class="btn btn-primary add-value" data-bs-toggle="modal" data-bs-target="#myModal-grant">
+               + add value
+              </button>
             </div>
-            <div class="parent">
-                    <span class="desc">Funding Sources</span><span class="required"> (Required) </span><input type="button" value="?"> <button class="btn-add-value">+ add value</button>  
-            </div>
-            <div class="content">
-                <span class="desc">Grant Managers</span><span class="required"> (Required) </span><input type="button" value="?"> <button class="btn-add-value">+ add value</button>
-            </div>
+            <div class="modal" id="myModal-grant">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title text-center">Add Person|Organisation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <form method="get">
+                  <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Person</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Organisation</a>
+                      </li>
+                    </ul> 
+                    <form>
+                      <label for="first-name" style="margin-bottom: 0.5rem">First Name(required)</label> 
+                      <input  type="text" placeholder="Ama K" class="form-control">
+                      <br>
+                      <label for="last-name" style="margin-bottom: 0.5rem">Last Name(required)</label> 
+                      <input  type="text" placeholder="Doe" class="form-control">
+                        <br>
+                      <label for="affiliation" style="margin-bottom: 0.5rem">Affiliation</label> 
+                      <input  type="text" placeholder="Enter an Organization Name...." class="form-control">
+                      <br>
+                      <label for="email" style="margin-bottom: 0.5rem">Email Address</label> 
+                      <input  type="text" placeholder="janedoe@domain.org" class="form-control">
+                      <br>
+                      <label for="orcid" style="margin-bottom: 0.5rem">ORCID</label> 
+                      <input  type="text" placeholder="0000-0000-0000-000" class="form-control">
+                      <br>
+                      <input class="form-input-text"type="submit">
+                    </form>
+                    </div>
+                      <div class="modal-footer">
+                        <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color: blue;">Save and Apply</button></a>
+                      </div>
+                    </form>
+                </div>
+              </div>
+             </div>  
          </div>
      </div>
      <div class="fourth-div">    
-         <input type="checkbox" id="description-2" />
-          <label for="description-2">Scope of Project</label>
+         <input class="accordion-input" type="checkbox" id="description-2" />
+          <label class="accordion-label"for="description-2">Scope of Project</label>
           <div class="project-content">
             <div class="parent">
                 <span class="desc">Subject terms</span>
                 <p>Do not copy/paste multiple terms into this field. Terms must be entered individually.</p>
+                <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>
+                </div>
+                <div class="content">
+                    <span class="desc">Geographic Location</span> <button class="btn-add-value">+ add value</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="14" rows="1"></textarea>
+                </div>
+                <div class="project-text">
+                  <span class="desc">Time Period(s)</span>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-time">
+                   + add value
+                  </button>
+                  <div class="modal" id="myModal-time">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title text-center">Add time period</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form method="get">
+                        <div class="modal-body">
+                           <h6 >To which time period do the data refer? If the data refer to multiple time periods, 
+                             you can enter each time period separately.</h6>
+                             <br>
+                            <label for="start-date" style="margin-bottom: 0.5rem">Start Date</label> 
+                            <input  type="text" placeholder="YYYY-MM-DD or YYYY-MM or YYYY" class="form-control">
+                            <br>
+                            <label for="end-date" style="margin-bottom: 0.5rem">End Date</label> 
+                            <input type="text" placeholder= "YYYY-MM-DD or YYYY-MM or YYYY" class="form-control">
+                            <br>
+                            <label for="textual-description">Textual Description (Optional)</label>
+                            <br>
+                            <input type="text" placeholder="eg. 'May 2020','90s','2000s'" class="form-control" style="margin-bottom:auto">
+                            <br>
+                            <button type="button" class="btn btn-secondary" style="background-color: blue;">Save and Apply</button>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color: white;color: black;">close</button></a>
+                            </div>
+                          </form>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+                
+                  <div class="content-text"></div>
+                    <span class="desc">Collection Date(s)</span>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-collection">
+                     + add value
+                    </button>
+                  </div>
+                  <div class="modal" id="myModal-collection">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title text-center">Add Collection Date(s)</h4>
+                        </div>
+                        <form method="get">
+                        <div class="modal-body">
+                          <h6>When were the data physically collected? If the data were collected in multiple waves, 
+                            you can enter each collection period separately.</h6>
+                            <br>
+                            <label for="start-date" style="margin-bottom: 0.5rem">Start Date</label> 
+                            <input  type="text" placeholder="YYYY-MM-DD or YYYY-MM or YYYY" class="form-control">
+                            <br>
+                            <label for="end-date" style="margin-bottom: 0.5rem">End Date</label> 
+                            <input type="text" placeholder= "YYYY-MM-DD or YYYY-MM or YYYY" class="form-control">
+                            <br>
+                            <label for="textual-description">Textual Description (Optional)</label>
+                            <br>
+                            <input type="text" placeholder="eg. 'May 2020','90s','2000s'" class="form-control" style="margin-bottom:auto">
+                            <br>
+                            <button type="button" class="btn btn-secondary" style="background-color: blue;">Save and Apply</button>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color: white;color: black;">close</button></a>
+                            </div>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+              <div class="parent"><span class="desc">Universe</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>
+              </div>
+            <div class="content"><span class="desc">Data Type(s)</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span >
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-datatype">
+                    + add value
+                   </button>
+                  <div class="modal" id="myModal-datatype">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h6 class="modal-title text-center">edit</h6>
+                        </div>
+                        <form method="get">
+                        <div class="modal-body">
+                            <input type="checkbox" id="check1" name="check1" value="admin-data">
+                            <label for="check1">administrative records data </label><br>
+                            <input type="checkbox" id="check2" name="check2" value="agg-data">
+                            <label for="check2"> Aggregate data</label><br>
+                            <input type="checkbox" id="check3" name="check3" value="audio">
+                            <label for="check3">audio : sound data</label><br>
+                            <input type="checkbox" id="check4" name="check4" value="census">
+                            <label for="check4">census/enumeration data </label><br>
+                            <input type="checkbox" id="check5" name="check5" value="clinical">
+                            <label for="check5">clinical data </label><br>
+                            <input type="checkbox" id="check6" name="check6" value="event">
+                            <label for="check6">event/transaction  data </label><br>
+                            <input type="checkbox" id="check7" name="check7" value="experimental-data">
+                            <label for="check7">experimental data </label><br>
+                            <input type="checkbox" id="check8" name="check8" value="gis">
+                            <label for="check8">geographic information data </label><br>
+                            <input type="checkbox" id="check9" name="check9" value="images">
+                            <label for="check9">images : photographs,drawings,graphical representation </label><br>
+                            <input type="checkbox" id="check10" name="check10" value="text">
+                            <label for="check10">text </label><br>
+                            <input type="checkbox" id="check11" name="check11" value="medical-records">
+                            <label for="check11">medical record </label><br>
+                            <input type="checkbox" id="check12" name="check12" value="observational-data">
+                            <label for="check12">observational data </label><br>
+                            <input type="checkbox" id="check13" name="check13" value="source code">
+                            <label for="check13">program source code </label><br>
+                            <input type="checkbox" id="check14" name="check14" value="voting-data">
+                            <label for="check14">rolling call voting data</label><br>
+                            <input type="checkbox" id="check15" name="check15" value="survey-data">
+                            <label for="check15">survey data </label><br>
+                            <input type="checkbox" id="check16" name="check16" value="video data">
+                            <label for="check16">video :film,animation,etc.</label><br>
+                            <input type="checkbox" id="check17" name="check17" value="other">
+                            <label for="check17">other </label><br>
+                            <input class="form-input-text"type="submit">
+                          </div>
+                            <div class="modal-footer">
+                              <span class="btn btn-secondary" style="background-color:darkblue;color: white !important;">
+                              <button class="edit-button" id="tick">
+                                 <img src="../static/images/check.png" style="width:16px ;height: 16px;">
+                              </button> 
+                              save
+                            </span>
+                              <a href="/deposit"><button type="button" class="btn btn-secondary" style="background-color: white;color: black;">cancel</button></a>
+                            </div>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="parent"><span class="desc">Collection Notes</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>   
+            </div>
+            </div>
+        </div> 
+        <div class="fifth-div">   
+          <input class="accordion-input" type="checkbox" id="description-3" />
+          <label class="accordion-label" for="description-3">Methodology</label>
+          <div class="project-content">
+            <div class="parent"><span class="desc">Response Rate</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>
+            </div>
+            <div class="content"><span class="desc">Sampling</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>
+            </div>
+            <div class="parent"><span class="desc">Collection Modes</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+            </div>
+            <div class="content"><span class="desc">Scales</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>
+            </div>
+            <div class="parent"><span class="desc">Weights</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="30" rows="10"></textarea>
+            </div>
+            <div class="content"><span class="desc">Unit(s) of Observation</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="14" rows="1"></textarea>
+            </div>
+            <div class="parent"><span class="desc">Geographic Location</span>
+                <span class="edit-icon"><img src="../static/images/pencil.svg"></span ><button class="edit-button" style="margin-left:0.3rem">edit</button>
+                    <br>
+                    <textarea name="subject terms" id="subject terms" cols="14" rows="1"></textarea>
             </div>
           </div>
         </div> 
-        <div class="fifth-div">   
-          <input type="checkbox" id="description-3" />
-          <label for="description-3">Methodology</label>
-          <div class="project-content">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum reprehenderit ipsum quibusdam tenetur corporis similique deleniti nesciunt facere corrupti, l
-                 abore magnam, iusto, delectus officiis totam voluptatem quam inventore numquam.</p>
-          </div>
-        </div> 
         <div class="sixth-div">
-          <input type="checkbox" id="description-3" />
-          <label for="description-3">Related Publications</label>
+          <input class="accordion-input" type="checkbox" id="description-4" />
+          <label class="accordion-label"for="description-4">Related Publications</label>
           <div class="project-content">
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum reprehenderit ipsum quibusdam tenetur corporis similique deleniti nesciunt facere corrupti, l
                  abore magnam, iusto, delectus officiis totam voluptatem quam inventore numquam.</p>

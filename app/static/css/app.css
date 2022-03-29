@@ -86,7 +86,7 @@ body{
     height: 100px;
     margin-left:300px;
   }
-  label {
+  .accordion-label {
     display: block;    
 	padding: 8px 22px;
     margin: 0 0 1px 0;
@@ -97,24 +97,24 @@ body{
 	transition: ease .5s;
 	position: relative;
 }
-label:hover {
+.accordion-label:hover {
 	background: #f5f3b8;
 }
 
-label::after {
+/* .accordion-label::after {
     content: '+';
     font-size: 22px;
     font-weight: bold;
     position: absolute;
     right: 10px;
     top: 2px;
-}
+} */
 
-input:checked + label::after {
+/* .accordion-input:checked + .accordion-label::after {
     content: '-';
     right: 14px;
     top: 3px;
-}
+} */
 
 .project-content {
     background:white;
@@ -132,12 +132,8 @@ input + label + .project-content {
 input:checked + label + .project-content {
 	display: block;
 }
-
 input {
 	display: none;
-}
-.input-group{
-
 }
 .third-div{
   width:850px;
@@ -202,8 +198,14 @@ button {
   padding: 1.2rem;
   background-color: #F7F7F7;
 }
-.edit-icon {
-  font-size: 0.15g ;
+.content{
+  width: 700px;
+  padding: 1.2rem;
+}
+.edit-icon img{
+  width:15px; 
+  height:15px;
+  color: blue !important;
 }
 
   footer{
@@ -212,4 +214,37 @@ button {
     position: relative;
     bottom: 0;
   }
+ .edit-button{
+    color: blue;
+ }
+ .project-text{
+  width: 700px;
+  padding: 1.2rem;
+  background-color: #F7F7F7;
+ }
+ .content-text{
+  width: 700px;
+  padding: 1.2rem;
+ }
  
+.text-box{
+  display: none;
+}
+.show-text-box{
+  margin-top: 1rem;
+  display: block;
+}
+.summary-edit-button {
+  size: 3px;
+}
+.modal-body{
+  background-color: white !important;
+}
+.form-group{
+  background-color: white !important;
+  color: black !important;
+}
+.form-label{
+  background-color: white;
+
+}
